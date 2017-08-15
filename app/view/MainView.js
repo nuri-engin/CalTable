@@ -5,18 +5,20 @@ Ext.define('CalTable.view.MainView', {
     requires: [
         'Ext.menu.Menu',
         'Ext.menu.Item',
-        'Ext.form.Label'
+        'Ext.form.Label',
+        'CalTable.view.FolioList'
     ],
 
     itemId: 'mainView',
     layout: 'border',
     defaultListenerScope: true,
-
+    
     items: [
         {
             xtype: 'panel',
             region: 'west',
-            split: true,
+            split: false,
+            //padding: 1,
             itemId: 'menuPanel',
             width: 150,
             title: 'Menu',
@@ -52,6 +54,7 @@ Ext.define('CalTable.view.MainView', {
             itemId: 'contentPanel',
             layout: 'card',
             scope: this,
+            padding: 0.50,
             items: [
                 {
                     xtype: 'panel',
@@ -69,20 +72,7 @@ Ext.define('CalTable.view.MainView', {
                         }
                     ]
                 }, {
-                    xtype: 'panel',
-                    itemId: 'foliolist',
-                    title: 'Folio List',
-                    layout: {
-                        type: 'vbox',
-                        align: 'center',
-                        pack: 'center'
-                    },
-                    items: [
-                        {
-                            xtype: 'label',
-                            text: 'Folio List View'
-                        }
-                    ]
+                    xtype: 'foliolist'
                 }, {
                     xtype: 'panel',
                     itemId: 'calendar',
@@ -105,5 +95,11 @@ Ext.define('CalTable.view.MainView', {
     
     onMenuClick: function(menu, item, e, eOpts) {
         location.hash = item.itemId;
+    },
+
+    initComponent: function () {
+        console.log('Step 2: MainView');
+        var me = this;
+        me.callParent();
     }
 });

@@ -13,12 +13,11 @@ Ext.define('CalTable.view.FolioList', {
     ],
 
     title: 'ORest Folio List',
-    padding: 1,
-    itemId: 'folioPanel',
+    itemId: 'foliolist',
     plugins: {ptype: 'cellediting', clicksToEdit: 1},
     headerPosition: 'top',
     bodyBorder: true,
-    style: 'border: 2px solid red;',
+    //style: 'border: 2px solid red;',
     titleAlign: 'center',
     
     initComponent: function () {
