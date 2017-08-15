@@ -17,8 +17,8 @@ Ext.define('CalTable.view.FolioList', {
     plugins: {ptype: 'cellediting', clicksToEdit: 1},
     headerPosition: 'top',
     bodyBorder: true,
-    //style: 'border: 2px solid red;',
-    titleAlign: 'center',
+    style: 'border: 1px solid white;',
+    titleAlign: 'left',
     
     initComponent: function () {
         var me = this;

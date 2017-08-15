@@ -17,8 +17,9 @@ Ext.define('CalTable.view.MainView', {
         {
             xtype: 'panel',
             region: 'west',
+            collapsible: true,
             split: false,
-            //padding: 1,
+            padding: 1,
             itemId: 'menuPanel',
             width: 150,
             title: 'Menu',
@@ -53,8 +54,8 @@ Ext.define('CalTable.view.MainView', {
             region: 'center',
             itemId: 'contentPanel',
             layout: 'card',
+            padding: 1,
             scope: this,
-            padding: 0.50,
             items: [
                 {
                     xtype: 'panel',
@@ -68,7 +69,7 @@ Ext.define('CalTable.view.MainView', {
                     items: [
                         {
                             xtype: 'label',
-                            text: 'Home View'
+                            text: 'Please select the action on the "Menu" panel at left side.'
                         }
                     ]
                 }, {
