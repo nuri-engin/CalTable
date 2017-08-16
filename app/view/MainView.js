@@ -76,8 +76,7 @@ Ext.define('CalTable.view.MainView', {
                 }, {
                     xtype: 'foliolist'
                 }, {
-                    xtype: 'hocalendar'
-                    /*
+                    xtype: 'panel',
                     itemId: 'hocalendar',
                     title: 'Calendar',
                     layout: {
@@ -90,7 +89,7 @@ Ext.define('CalTable.view.MainView', {
                             xtype: 'label',
                             text: 'Calendar View'
                         }
-                    ]*/
+                    ]
                 }
             ]
         }
