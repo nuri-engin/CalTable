@@ -5,7 +5,7 @@ Ext.define('CalTable.store.FolioStore', {
 
     proxy: {
         type: 'ajax',
-        url: 'http://192.168.0.223:8223/orest/folio/list',
+        url: 'http://192.168.0.223:8223/oresto/folio/list',
         reader: {
             type: 'json'
         }

@@ -86,7 +86,6 @@ Ext.define('CalTable.view.FolioList', {
                     if (value == null) { return "N/A"; } else { return value; }
                 }
             }, {
-                xtype: 'booleancolumn',
                 dataIndex: 'isactive',
                 flex: 1,
                 text: 'Is-Active',

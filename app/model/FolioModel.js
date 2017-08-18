@@ -23,7 +23,7 @@ Ext.define('CalTable.model.FolioModel', {
         },
 
         api: {
-            read: 'http://192.168.0.223:8223/orest/folio/list'
+            read: 'http://192.168.0.223:8223/oresto/folio/list'
         },
 
         reader: {
