@@ -69,8 +69,9 @@ Ext.define('CalTable.view.MainView', {
                     },
                     items: [
                         {
-                            xtype: 'label',
-                            text: 'Please select the action on the "Menu" panel at left side.'
+                            xtype: 'panel',
+                            flex: 2,
+                            html: '<img src="http://hotech.com.tr/files/E4BF0F19-FE05-4F0F-82E6-6E6C98B6287C/imgs/menu_logo.png"/> <br /> Please select an action on the <b>Menu</b> panel at left side.'
                         }
                     ]
                 }, {

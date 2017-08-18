@@ -1,6 +1,6 @@
 Ext.define('CalTable.model.MyEventModel', {
     extend : 'Sch.model.Event',
-    fields : ['PercentDone']
+    fields : ['Guest']
 });
 
 Ext.define('CalTable.view.Scheduler', {
@@ -18,7 +18,7 @@ Ext.define('CalTable.view.Scheduler', {
     rowHeight         : 35,
     border            : false,
     viewPreset        : 'dayNightShift',
-    eventBodyTemplate : '<div class="value" style="width: {PercentDone}%">{PercentDone}</div>',
+    eventBodyTemplate : '<div class="value" style="width: {Guest}%">{Guest}</div>',
     startDate         : new Date(2017, 0, 1),
     endDate           : new Date(2017, 0, 3),
     split             : false,
@@ -27,7 +27,7 @@ Ext.define('CalTable.view.Scheduler', {
 
     // Setup static columns
     columns : [
-        { header : 'Name', sortable : true, width : 100, dataIndex : 'Name', flex : 1 }
+        { header : 'Room', sortable : true, width : 80, dataIndex : 'Name', flex : 1 }
     ],
 
     horizontalTimeAxisColumnCfg : {
@@ -37,16 +37,16 @@ Ext.define('CalTable.view.Scheduler', {
     resourceStore : {
         type    : 'resourcestore',
         sorters : {
-            property  : 'Name',
+            property  : 'Room',
             direction : 'ASC'
         },
         data    : [
-            { Id : 'r1', Name : 'Mike' },
-            { Id : 'r2', Name : 'Linda' },
-            { Id : 'r3', Name : 'Don' },
-            { Id : 'r4', Name : 'Karen' },
-            { Id : 'r5', Name : 'Doug' },
-            { Id : 'r6', Name : 'Peter' }
+            { Id : '101', Name : '101' },
+            { Id : '201', Name : '201' },
+            { Id : '301', Name : '301' },
+            { Id : '401', Name : '401' },
+            { Id : '501', Name : '501' },
+            { Id : '601', Name : '601' }
         ]
     },
 
@@ -55,28 +55,28 @@ Ext.define('CalTable.view.Scheduler', {
         model : 'CalTable.model.MyEventModel', // See definition above
         data  : [
             {
-                ResourceId  : 'r1',
-                PercentDone : 60,
+                ResourceId  : '101',
+                Guest : 'Mike Hunder',
                 StartDate   : new Date(2017, 0, 1, 10),
-                EndDate     : new Date(2017, 0, 1, 12)
+                EndDate     : new Date(2017, 0, 2, 12)
             },
             {
-                ResourceId  : 'r2',
-                PercentDone : 20,
+                ResourceId  : '201',
+                Guest : 'Jennifer Abustly',
                 StartDate   : new Date(2017, 0, 1, 12),
-                EndDate     : new Date(2017, 0, 1, 13)
+                EndDate     : new Date(2017, 0, 4, 13)
             },
             {
-                ResourceId  : 'r3',
-                PercentDone : 80,
+                ResourceId  : '301',
+                Guest : 'Maria Gochra',
                 StartDate   : new Date(2017, 0, 1, 14),
-                EndDate     : new Date(2017, 0, 1, 16)
+                EndDate     : new Date(2017, 0, 7, 16)
             },
             {
-                ResourceId  : 'r6',
-                PercentDone : 70,
+                ResourceId  : '601',
+                Guest : 'Alexendar Mity',
                 StartDate   : new Date(2017, 0, 1, 16),
-                EndDate     : new Date(2017, 0, 1, 18)
+                EndDate     : new Date(2017, 0, 3, 18)
             }
         ]
     },
