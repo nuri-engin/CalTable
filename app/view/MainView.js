@@ -7,7 +7,7 @@ Ext.define('CalTable.view.MainView', {
         'Ext.menu.Item',
         'Ext.form.Label',
         'CalTable.view.FolioList',
-        'CalTable.view.HOCalendar'
+        'CalTable.view.Scheduler'
     ],
 
     itemId: 'mainView',
@@ -42,7 +42,7 @@ Ext.define('CalTable.view.MainView', {
                             focusable: true
                         }, {
                             xtype: 'menuitem',
-                            itemId: 'hocalendar',
+                            itemId: 'calendar',
                             text: 'Calendar',
                             focusable: true
                         }
@@ -76,20 +76,7 @@ Ext.define('CalTable.view.MainView', {
                 }, {
                     xtype: 'foliolist'
                 }, {
-                    xtype: 'panel',
-                    itemId: 'hocalendar',
-                    title: 'Calendar',
-                    layout: {
-                        type: 'vbox',
-                        align: 'center',
-                        pack: 'center'
-                    }, 
-                    items: [
-                        {
-                            xtype: 'label',
-                            text: 'Calendar View'
-                        }
-                    ]
+                    xtype: 'calendar'
                 }
             ]
         }
